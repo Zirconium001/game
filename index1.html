@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the Cyberpunk Game</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #111; /* Dark background */
+            color: #ccc; /* Semi-white text */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #fff; /* White text for title */
+            text-shadow: 0 0 10px #ffeb3b, 0 0 20px #ffeb3b; /* Neon yellow glow */
+            letter-spacing: 2px;
+            font-family: 'Courier New', Courier, monospace; /* Cyberpunk font style */
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: #bbb; /* Light grey for text */
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        /* Let's Go Button */
+        .btn {
+            padding: 20px 40px;
+            font-size: 1.5rem;
+            background-color: #ffeb3b; /* Neon yellow */
+            color: #111; /* Dark text on button */
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+                    }
+
+        .btn:hover {
+            background-color: #fbc02d; /* Slightly darker yellow */
+            box-shadow: 0 0 25px #ffeb3b, 0 0 50px #ffeb3b; /* Brighter neon glow */
+            transform: scale(1.1);
+        }
+
+        .btn:active {
+            background-color: #f57f17; /* Aggressive dark orange-yellow */
+            box-shadow: 0 0 15px #f57f17, 0 0 30px #f57f17; /* Darker glow effect */
+            transform: scale(1);
+        }
+
+        /* Neon-like animation */
+        @keyframes neonGlow {
+            0% {
+                text-shadow: 0 0 10px #ffeb3b, 0 0 20px #ffeb3b;
+            }
+            50% {
+                text-shadow: 0 0 20px #ffeb3b, 0 0 30px #ffeb3b;
+            }
+            100% {
+                text-shadow: 0 0 10px #ffeb3b, 0 0 20px #ffeb3b;
+            }
+        }
+
+        /* Applying the neon effect to the welcome text */
+        h1 {
+            animation: neonGlow 1.5s infinite alternate;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            .btn {
+                padding: 15px 30px;
+                font-size: 1.2rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to the Number Guessing Game</h1>
+    <p>Get ready for an exciting journey. The game awaits.</p>
+    <button class="btn" onclick="startGame()">Let's Go</button>
+
+    <script>
+        function startGame() {
+            window.location.href = 'game.html';  // Redirects to the game page
+        }
+    </script>
+
+</body>
+</html>
